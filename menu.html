@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="menu.html">Alke Wallet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deposit.html">Depositar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sendmoney.html">Enviar Dinero</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transactions.html">Movimientos</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="login.html" id="logoutBtn">Salir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container animate-fade-in">
+        <div class="row mb-4">
+            <div class="col-12 text-center text-md-start">
+                <h2 class="fw-bold">Hola, <span class="text-primary text-capitalize" id="userName">Usuario</span> 👋</h2>
+                <p class="text-muted">Este es el estado actual de tus activos financieros digitales.</p>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-wallet text-white border-0 shadow-lg rounded-4 p-4 text-center">
+                    <p class="text-uppercase tracking-wide opacity-75 mb-1 small fw-semibold">Saldo Disponible</p>
+                    <h1 class="display-4 fw-bold mb-3" id="displaySaldo">$0.00</h1>
+                    <div class="d-flex justify-content-center">
+                        <span class="badge bg-white text-primary px-3 py-2 rounded-pill fw-bold">Cuenta Corriente Digital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="fw-bold mb-3 text-secondary text-center text-md-start">Operaciones</h4>
+        <div class="row g-4 text-center justify-content-center">
+            <div class="col-6 col-sm-4">
+                <a href="deposit.html" class="card text-decoration-none border-0 shadow-sm h-100 p-3 rounded-4 hover-card">
+                    <div class="fs-1 text-primary mb-2">📥</div>
+                    <h5 class="fw-bold text-dark m-0">Depositar Fondos</h5>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4">
+                <a href="sendmoney.html" class="card text-decoration-none border-0 shadow-sm h-100 p-3 rounded-4 hover-card">
+                    <div class="fs-1 text-primary mb-2">💸</div>
+                    <h5 class="fw-bold text-dark m-0">Enviar Dinero</h5>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4">
+                <a href="transactions.html" class="card text-decoration-none border-0 shadow-sm h-100 p-3 rounded-4 hover-card">
+                    <div class="fs-1 text-primary mb-2">📊</div>
+                    <h5 class="fw-bold text-dark m-0">Ver Historial</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Enviar Fondos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="menu.html">Alke Wallet</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link text-white fw-semibold" href="menu.html">← Volver al Menú</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container animate-fade-in">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow rounded-4 p-4 h-100">
+                    <h4 class="fw-bold text-primary mb-3">💸 Simular Envío de Fondos</h4>
+                    <div class="alert alert-secondary py-2 text-center rounded-3">
+                        Tu Saldo actual: <strong id="sendCurrentSaldo">$0.00</strong>
+                    </div>
+                    <form id="sendForm">
+                        <div class="mb-3 position-relative">
+                            <label for="searchContact" class="form-label text-secondary fw-semibold">Buscar Contacto Destinatario</label>
+                            <input type="text" class="form-control" id="searchContact" placeholder="Escribe el nombre para buscar..." autocomplete="off" required>
+                            <div id="autocompleteList" class="list-group position-absolute w-100 shadow-lg d-none z-3"></div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="sendAmount" class="form-label text-secondary fw-semibold">Monto a Transferir ($)</label>
+                            <input type="number" class="form-control" id="sendAmount" min="1" placeholder="Ingresa la cantidad" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold text-uppercase shadow">Realizar Transferencia</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow rounded-4 p-4 h-100">
+                    <h4 class="fw-bold text-primary mb-3">👤 Agregar Nuevo Contacto</h4>
+                    <form id="contactForm" class="mb-4">
+                        <div class="row g-2">
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="contactName" placeholder="Nombre completo del destinatario" required>
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-outline-primary w-100 fw-bold">+ Añadir</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h5 class="fw-semibold text-secondary mb-2">Mis Contactos Guardados</h5>
+                    <ul class="list-group list-group-flush border-top overflow-y-auto" id="contactsList" style="max-height: 200px;">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sendModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-body text-center p-4">
+                    <div id="sendModalIcon" class="fs-1 mb-2"></div>
+                    <h4 id="sendModalTitle" class="fw-bold mb-2"></h4>
+                    <p class="text-muted" id="sendModalMessage"></p>
+                    <button type="button" class="btn btn-primary px-4 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
